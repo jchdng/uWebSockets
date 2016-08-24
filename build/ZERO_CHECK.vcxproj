@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{6AA2CBC7-4555-396F-B984-0E59C2C19D4C}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\4a920b6462d9c2696c5d7ec50a7c6220\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\cmake\bin\cmake.exe -HE:/MyProjects/WebSocket-Related/uWebSockets -BE:/MyProjects/WebSocket-Related/uWebSockets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/MyProjects/WebSocket-Related/uWebSockets/build/CMakeFiles/4a920b6462d9c2696c5d7ec50a7c6220/generate.stamp.rule;D:\cmake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\FindOpenSSL.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\cmake\share\cmake-3.6\Modules\FindZLIB.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\cmake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\CMakeLists.txt;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeSystem.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\generate.stamp;E:\MyProjects\WebSocket-Related\uWebSockets\build\examples\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\cmake\bin\cmake.exe -HE:/MyProjects/WebSocket-Related/uWebSockets -BE:/MyProjects/WebSocket-Related/uWebSockets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/MyProjects/WebSocket-Related/uWebSockets/build/CMakeFiles/4a920b6462d9c2696c5d7ec50a7c6220/generate.stamp.rule;D:\cmake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\FindOpenSSL.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\cmake\share\cmake-3.6\Modules\FindZLIB.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\cmake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\CMakeLists.txt;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeSystem.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\generate.stamp;E:\MyProjects\WebSocket-Related\uWebSockets\build\examples\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\cmake\bin\cmake.exe -HE:/MyProjects/WebSocket-Related/uWebSockets -BE:/MyProjects/WebSocket-Related/uWebSockets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/MyProjects/WebSocket-Related/uWebSockets/build/CMakeFiles/4a920b6462d9c2696c5d7ec50a7c6220/generate.stamp.rule;D:\cmake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\FindOpenSSL.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\cmake\share\cmake-3.6\Modules\FindZLIB.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\cmake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\CMakeLists.txt;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeSystem.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\generate.stamp;E:\MyProjects\WebSocket-Related\uWebSockets\build\examples\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\cmake\bin\cmake.exe -HE:/MyProjects/WebSocket-Related/uWebSockets -BE:/MyProjects/WebSocket-Related/uWebSockets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/MyProjects/WebSocket-Related/uWebSockets/build/CMakeFiles/4a920b6462d9c2696c5d7ec50a7c6220/generate.stamp.rule;D:\cmake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\FindOpenSSL.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\cmake\share\cmake-3.6\Modules\FindZLIB.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\cmake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\CMakeLists.txt;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\3.6.1\CMakeSystem.cmake;E:\MyProjects\WebSocket-Related\uWebSockets\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\MyProjects\WebSocket-Related\uWebSockets\build\CMakeFiles\generate.stamp;E:\MyProjects\WebSocket-Related\uWebSockets\build\examples\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
